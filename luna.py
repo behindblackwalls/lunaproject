@@ -61,6 +61,25 @@ def find_console_log_statements(code):
 
     return found_statements
 
+def find_dom_xss(code):
+    pattern = re.compile(r'\.innerHTML\s*=\s*[^\n]+')
+    matches = pattern.finditer(code)
+    found_xss = []
+    for match in matches:
+        found_xss.append((match.group(), match.start()))
+
+    return found_xss
+
+def print_results(title, results, verbose, file_path):
+    print(f"\n{title}:")
+    for result in results:
+        print(f"  {result[0]}, Position: {result[1]}")
+
+        if verbose:
+            print("\nCode segment:")
+            print(extractCodeSegment(file_path, result[1], 5, 5))
+            print("-" * 40)
+
 
 def main():
     file_path = get_file_path()
@@ -70,35 +89,17 @@ def main():
         insecure_functions = find_insecure_functions(code)
         hardcoded_tokens = find_hardcoded_tokens(code)
         console_log_statements = find_console_log_statements(code)
+        dom_xss = find_dom_xss(code)
 
-        print("Insecure Functions Found:")
-        for func, position, matched in insecure_functions:
-            print(f"  Function: {func}, Position: {position}, Matched: {matched}")
+        verbose = args.verbose
 
-        print("Hardcoded Tokens Found:")
-        for token, position in hardcoded_tokens:
-            print(f"  Token: {token}, Position: {position}")
+        print_results("Insecure Functions Found", insecure_functions, verbose, file_path)
 
-        print("Console Log Statements Found:")
-        for statement, position in console_log_statements:
-            print(f"  Statement: {statement}, Position: {position}")
+        print_results("Hardcoded Tokens Found", hardcoded_tokens, verbose, file_path)
 
-        if args.verbose:
-            # Display code segments for insecure functions
-            for func, position, matched in insecure_functions:
-                print(f'\nCode segment for function: {func}')
-                print(extractCodeSegment(file_path, position, 5, 5))
+        print_results("Console Log Statements Found", console_log_statements, verbose, file_path)
 
-            # Display code segments for hardcoded tokens
-            for token, position in hardcoded_tokens:
-                print(f'\nCode segment for token: {token}')
-                print(extractCodeSegment(file_path, position, 5, 5))
-
-            # Display code segments for console log statements
-            for statement, position in console_log_statements:
-                print(f'\nCode segment for console log statement: {statement}')
-                print(extractCodeSegment(file_path, position, 5, 5))
-
+        print_results("Possible DOM XSS Found", dom_xss, verbose, file_path)
 
 parser = argparse.ArgumentParser(description='Analyze JavaScript file for security issues.')
 parser.add_argument('--verbose', action='store_true', help='Display code segments')

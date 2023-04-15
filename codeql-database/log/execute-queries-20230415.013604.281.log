@@ -1,0 +1,19 @@
+[2023-04-15 01:36:04] This is codeql execute queries -J-Xmx1482M --off-heap-ram=0 --verbosity=progress --logdir=/home/kali/Documents/engagements/luna/codeql-database/log --evaluator-log-level=5 --warnings=show --search-path=/home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites --qlconfig-file=/home/kali/Documents/engagements/luna/qlconfig.yml --no-rerun --output=/home/kali/Documents/engagements/luna/codeql-database/results -- /home/kali/Documents/engagements/luna/codeql-database/db-javascript /home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites/javascript-code-scanning.qls
+[2023-04-15 01:36:04] Calling plumbing command: codeql resolve queries --search-path=/home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites --qlconfig-file=/home/kali/Documents/engagements/luna/qlconfig.yml --format=json -- /home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites/javascript-code-scanning.qls
+[2023-04-15 01:36:04] Exception caught at top level: /home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites/javascript-code-scanning.qls is not a .ql file, .qls file, a directory, or a query pack specification.
+                      com.semmle.cli2.resolve.ResolveQueriesCommand.resolveQuerySpecifier(ResolveQueriesCommand.java:281)
+                      com.semmle.cli2.resolve.ResolveQueriesCommand.executeJSON(ResolveQueriesCommand.java:193)
+                      com.semmle.cli2.resolve.ResolveQueriesCommand.executeJSON(ResolveQueriesCommand.java:71)
+                      com.semmle.cli2.picocli.SimpleJsonSubcommand.executeInsistingOnJSONWithExistingMessages(SimpleJsonSubcommand.java:129)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SimpleJsonSubcommand.executeInsistingOnJSON(SimpleJsonSubcommand.java:119)
+                      com.semmle.cli2.picocli.PlumbingRunner.call(PlumbingRunner.java:53)
+                      com.semmle.cli2.picocli.SubcommandCommon.callPlumbingInProcess(SubcommandCommon.java:170)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.executeSubcommand(ExecuteQueriesCommand.java:321)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$2(SubcommandCommon.java:671)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:670)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:591)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:225)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:234)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:102)

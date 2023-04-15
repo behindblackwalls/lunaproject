@@ -2,3 +2,9 @@
 - Cool UI/UX
 - Project Luna
 - Vulnerability testing
+- Outline:
+
+    Integrate a popular JavaScript static code analysis library, such as ESLint, to identify potential issues in the code.
+    Utilize a taint analysis library like CodeQL to track the flow of data from untrusted sources to potentially sensitive sinks.
+    Incorporate OWASP dependency-check to scan for known vulnerabilities in third-party libraries.
+    Integrate the new techniques into the existing luna.py script and update the severity assignment logic accordingly.

@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "eslint-plugin-security": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "name": "luna",
+  "description": "",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NetRunnerBlackwall/lunaproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NetRunnerBlackwall/lunaproject/issues"
+  },
+  "homepage": "https://github.com/NetRunnerBlackwall/lunaproject#readme"
+}

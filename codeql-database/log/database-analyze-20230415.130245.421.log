@@ -1,0 +1,11 @@
+[2023-04-15 13:02:45] This is codeql database analyze /home/kali/Documents/engagements/luna/codeql-database --format=sarif-latest --output=codeql-results.sarif --no-sarif-add-snippets --search-path /home/kali/Documents/codeql-lib/javascript/ql/src/codeql-suites/ /home/kali/Documents/codeql-lib/javascript/ql/src/codeql-suites/javascript-code-scanning.qls
+[2023-04-15 13:02:45] Log file was started late.
+[2023-04-15 13:02:45] [PROGRESS] database analyze> Running queries.
+[2023-04-15 13:02:45] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --warnings=show --search-path=/home/kali/Documents/codeql-lib/javascript/ql/src/codeql-suites --qlconfig-file=/home/kali/Documents/engagements/luna/qlconfig.yml --no-rerun -- /home/kali/Documents/engagements/luna/codeql-database /home/kali/Documents/codeql-lib/javascript/ql/src/codeql-suites/javascript-code-scanning.qls
+[2023-04-15 13:02:45] Calling plumbing command: codeql resolve ram --format=json
+[2023-04-15 13:02:45] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx1482M",
+                        "--off-heap-ram=0"
+                      ]
+[2023-04-15 13:02:45] Spawning plumbing command: execute queries -J-Xmx1482M --off-heap-ram=0 --verbosity=progress --logdir=/home/kali/Documents/engagements/luna/codeql-database/log --evaluator-log-level=5 --warnings=show --search-path=/home/kali/Documents/codeql-lib/javascript/ql/src/codeql-suites --qlconfig-file=/home/kali/Documents/engagements/luna/qlconfig.yml --no-rerun --output=/home/kali/Documents/engagements/luna/codeql-database/results -- /home/kali/Documents/engagements/luna/codeql-database/db-javascript /home/kali/Documents/codeql-lib/javascript/ql/src/codeql-suites/javascript-code-scanning.qls

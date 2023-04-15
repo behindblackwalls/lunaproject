@@ -1,0 +1,19 @@
+[2023-04-14 22:43:01] This is codeql database analyze codeql-database javascript-code-scanning.qls --format=sarif-latest --output=results.sarif
+[2023-04-14 22:43:01] Log file was started late.
+[2023-04-14 22:43:01] [PROGRESS] database analyze> Running queries.
+[2023-04-14 22:43:01] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --warnings=show --qlconfig-file=/home/kali/Documents/engagements/luna/qlconfig.yml --no-rerun -- /home/kali/Documents/engagements/luna/codeql-database javascript-code-scanning.qls
+[2023-04-14 22:43:01] Exception caught at top level: Database at /home/kali/Documents/engagements/luna/codeql-database needs to be finalized before running queries; please run codeql database finalize
+                      com.semmle.cli2.database.RunQueriesCommand.executeSubcommand(RunQueriesCommand.java:160)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$2(SubcommandCommon.java:671)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:670)
+                      com.semmle.cli2.picocli.PlumbingRunner.run(PlumbingRunner.java:109)
+                      com.semmle.cli2.picocli.SubcommandCommon.runPlumbingInProcess(SubcommandCommon.java:208)
+                      com.semmle.cli2.database.AnalyzeCommand.executeSubcommand(AnalyzeCommand.java:89)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$2(SubcommandCommon.java:671)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:670)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:591)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:225)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:234)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:102)

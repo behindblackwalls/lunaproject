@@ -1,0 +1,15 @@
+[2023-04-14 23:17:24] This is codeql database analyze /home/kali/Documents/engagements/luna/codeql-database --format=sarif-latest --output=codeql-results.sarif --no-sarif-add-snippets --search-path /home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites javascript-code-scanning.qls
+[2023-04-14 23:17:24] Log file was started late.
+[2023-04-14 23:17:24] [PROGRESS] database analyze> Running queries.
+[2023-04-14 23:17:24] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --warnings=show --search-path=/home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites --qlconfig-file=/home/kali/Documents/engagements/luna/qlconfig.yml --no-rerun -- /home/kali/Documents/engagements/luna/codeql-database javascript-code-scanning.qls
+[2023-04-14 23:17:24] Calling plumbing command: codeql resolve ram --format=json
+[2023-04-14 23:17:24] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx1482M",
+                        "--off-heap-ram=0"
+                      ]
+[2023-04-14 23:17:24] Spawning plumbing command: execute queries -J-Xmx1482M --off-heap-ram=0 --verbosity=progress --logdir=/home/kali/Documents/engagements/luna/codeql-database/log --evaluator-log-level=5 --warnings=show --search-path=/home/kali/Documents/codeql/codeql/javascript-queries/codeql-suites --qlconfig-file=/home/kali/Documents/engagements/luna/qlconfig.yml --no-rerun --output=/home/kali/Documents/engagements/luna/codeql-database/results -- /home/kali/Documents/engagements/luna/codeql-database/db-javascript javascript-code-scanning.qls
+[2023-04-14 23:17:26] [ERROR] Spawned process exited abnormally (code 2; tried to run: [/home/kali/Documents/codeql/tools/linux64/java/bin/java, -Xmx1482M, -Djava.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, -cp, /home/kali/Documents/codeql/tools/codeql.jar, com.semmle.cli2.CodeQL, env_argv, execute, queries, -J-Xmx1482M, _, _, _, _, _, _, _, --no-rerun, _, --, /home/kali/Documents/engagements/luna/codeql-database/db-javascript, javascript-code-scanning.qls])
+[2023-04-14 23:17:26] Plumbing command codeql execute queries terminated with status 2.
+[2023-04-14 23:17:26] Plumbing command codeql database run-queries completed with status 2.
+[2023-04-14 23:17:26] Exiting with code 2
